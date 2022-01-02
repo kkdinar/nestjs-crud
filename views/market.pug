@@ -1,0 +1,43 @@
+doctype html
+html
+    head
+        title Маркет
+        style
+            include style.css  
+        script
+            include script.js      
+    body
+        table.loginForm
+            tr
+                td Почта:
+                td  
+                    input.button#username(name = "username", value=username)
+            tr
+                td Пароль:
+                td  
+                    input.button#password(name="password", type="password" value=password)
+        p
+        input.loginForm.button(type='button', value='Войти' onclick="getJWT()")
+        
+        p
+        table.marketForm
+            tr  
+                td
+                    input#id(name='id', value='0', type='hidden')
+            tr
+                td Наименование:
+                td 
+                    input.button#name(name='name')
+            tr
+                td Стоимость:
+                td 
+                    input.button#price(name='price')   
+        p  
+        input.marketForm.button(type='button', value='Сохранить' onclick="SaveProduct()")
+        p
+        input.marketForm.button(type='button', value='-10' onclick="GetProducts(-1)")
+        label Показать товары
+        input.marketForm.button(type='button', value='+10' onclick="GetProducts(+1)")
+        p
+        table.marketForm
+            tr#rows
