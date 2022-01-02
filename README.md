@@ -2,6 +2,7 @@
 
 ```bash
 $ http://work-assistant.ru:5000/
+Почта: guest, Пароль: 123.
 ```
 
 ## Задание
